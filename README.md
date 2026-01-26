@@ -1,6 +1,6 @@
-# PotShield Setup (T-Pot CE on Ubuntu 24.04 LTS)
+# T-PotShield Setup (T-Pot CE on Ubuntu 24.04 LTS)
 
-PotShield is a **copy/paste friendly installer + menu** that helps you deploy **T-Pot CE** (Telekom Security’s multi-honeypot platform) on a fresh **Ubuntu Server 24.04 LTS** box.
+T-PotShield is a **copy/paste friendly installer + menu** that helps you deploy **T-Pot CE** (Telekom Security’s multi-honeypot platform) on a fresh **Ubuntu Server 24.04 LTS** box.
 
 It also includes the *two most important “gotchas”* people hit in real installs:
 
@@ -72,8 +72,8 @@ SSH into your new Ubuntu Server and run:
 sudo apt update
 sudo apt -y install git
 cd ~
-git clone https://github.com/YOURNAME/PotShield-Setup.git
-cd PotShield-Setup
+git clone https://github.com/YOURNAME/T-PotShield-Setup.git
+cd T-PotShield-Setup
 chmod +x menu.sh scripts/*.sh
 ./menu.sh
 ```
