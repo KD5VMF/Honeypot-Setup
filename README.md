@@ -1,4 +1,4 @@
-# Riverbed Honeypot Kit (Ubuntu Server 24.04 LTS)
+# Honeypot Kit (Ubuntu Server 24.04 LTS)
 
 This repo is a **drop-in kit** to set up **T-Pot CE** on a fresh Ubuntu Server 24.04 LTS machine with:
 - fast, repeatable setup
