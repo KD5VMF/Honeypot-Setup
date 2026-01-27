@@ -1,3 +1,4 @@
+cat > ~/Honeypot-Setup/scripts/25_run_tpot_installer.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -9,21 +10,23 @@ if [[ ! -d "${TPOT_DIR}" ]]; then
 fi
 
 echo "[*] Launching official T-Pot installer (interactive)..."
-echo "    Follow prompts carefully (ports/credentials). Reboot may be required."
+echo "    IMPORTANT: T-Pot wants the installer started as a regular user."
+echo "    It will ask for sudo when needed."
 echo
 
 cd "${TPOT_DIR}"
 
-# The T-Pot repo provides an install script; path/name may change over time.
-# We try common locations.
 if [[ -x "./install.sh" ]]; then
-  sudo ./install.sh
+  ./install.sh
 elif [[ -x "./installer/install.sh" ]]; then
-  sudo ./installer/install.sh
+  ./installer/install.sh
 elif [[ -x "./iso/installer/install.sh" ]]; then
-  sudo ./iso/installer/install.sh
+  ./iso/installer/install.sh
 else
   echo "[ERR] Could not find install.sh. Check the T-Pot repo layout."
   echo "      Try: ls -la ${TPOT_DIR}"
   exit 1
 fi
+EOF
+
+chmod +x ~/Honeypot-Setup/scripts/25_run_tpot_installer.sh
