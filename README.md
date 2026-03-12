@@ -72,7 +72,7 @@ SSH into your new Ubuntu Server and run:
 sudo apt update
 sudo apt -y install git
 cd ~
-git clone https://github.com/YOURNAME/T-PotShield-Setup.git
+git clone https://github.com/kd5vmf/T-PotShield-Setup.git
 cd T-PotShield-Setup
 chmod +x menu.sh scripts/*.sh
 ./menu.sh
